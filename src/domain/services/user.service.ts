@@ -4,11 +4,11 @@ import { Repository } from 'typeorm';
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 
-import UserEntity from '@components/users/entities/user.entity';
-import UserDto from '@components/users/dto/user.dto';
+import UserEntity from '@domain/entities/user/user.entity';
+import UserDto from '@domain/dto/user/user.dto';
 
 @Injectable()
-export default class UsersService {
+export default class UserService {
   constructor(@InjectRepository(UserEntity) private readonly usersRepository: Repository<UserEntity>) {}
 
   async create(userDto: UserDto): Promise<UserEntity> {

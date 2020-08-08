@@ -4,13 +4,13 @@ import * as bcrypt from 'bcrypt';
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
 import { RedisService } from 'nestjs-redis';
-import jwtConstants from '@components/auth/constants';
+import jwtConstants from '@app/constants/authConstants';
 
-import { IAuthLoginInput } from '@components/auth/interfaces/IAuthLoginInput.interface';
-import { IAuthValidateUserOutput } from '@components/auth/interfaces/IAuthValidateUserOutput.interface';
-import { IAuthLoginOutput } from '@components/auth/interfaces/IAuthLoginOutput.interface';
+import { IAuthLoginInput } from '@domain/interfaces/auth/IAuthLoginInput.interface';
+import { IAuthValidateUserOutput } from '@domain/interfaces/auth/IAuthValidateUserOutput.interface';
+import { IAuthLoginOutput } from '@domain/interfaces/auth/IAuthLoginOutput.interface';
 
-import UsersService from '@components/users/users.service';
+import UsersService from '@domain/services/user.service';
 
 @Injectable()
 export default class AuthService {

@@ -33,7 +33,6 @@
     "class-transformer": "0.2.3",
     "class-validator": "0.12.2",
     "express": "4.17.1",
-    "husky": "4.2.5",
     "ioredis": "4.17.3",
     "module-alias": "2.2.2",
     "mongodb": "3.5.9",
@@ -63,6 +62,7 @@
     "eslint-config-airbnb-typescript": "8.0.2",
     "eslint-config-prettier": "6.10.0",
     "eslint-plugin-import": "2.20.1",
+    "husky": "4.2.5",
     "jest": "26.0.1",
     "prettier": "1.19.1",
     "supertest": "4.0.2",
@@ -74,8 +74,9 @@
   },
   "jest": {
     "moduleNameMapper": {
-      "^@shared(.*)$": "<rootDir>/shared$1",
-      "^@components(.*)$": "<rootDir>/components$1"
+      "^@domain(.*)$": "<rootDir>/domain$1",
+      "^@infrastructure(.*)$": "<rootDir>/infrastructure$1",
+      "^@app(.*)$": "<rootDir>/app$1"
     },
     "moduleFileExtensions": [
       "js",
@@ -96,8 +97,9 @@
     }
   },
   "_moduleAliases": {
-    "@shared": "./dist/shared",
-    "@components": "./dist/components"
+    "@domain": "./dist/domain",
+    "@infrastructure": "./dist/infrastructure",
+    "@app": "./dist/app"
   },
   "husky": {
     "hooks": {

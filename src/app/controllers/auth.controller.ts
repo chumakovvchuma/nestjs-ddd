@@ -10,15 +10,15 @@ import {
 } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
 
-import { IAuthLoginOutput } from '@components/auth/interfaces/IAuthLoginOutput.interface';
-import { ICreatedResponse } from '@shared/interfaces/responses/ICreatedResponse.interface';
-import { IVerbUnauthorized } from '@shared/interfaces/responses/IVerbUnauthorized.interface';
+import { IAuthLoginOutput } from '@domain/interfaces/auth/IAuthLoginOutput.interface';
+import { ICreatedResponse } from '@domain/interfaces/responses/ICreatedResponse.interface';
+import { IVerbUnauthorized } from '@domain/interfaces/responses/IVerbUnauthorized.interface';
 
-import LocalAuthGuard from '@components/auth/guards/local-auth.guard';
-import AuthService from '@components/auth/auth.service';
-import UsersService from '@components/users/users.service';
-import UserDto from '@components/users/dto/user.dto';
-import RefreshTokenDto from '@components/auth/dto/refreshToken.dto';
+import LocalAuthGuard from '@app/auth/guards/local-auth.guard';
+import AuthService from '@domain/services/auth.service';
+import UsersService from '@domain/services/user.service';
+import UserDto from '@domain/dto/user/user.dto';
+import RefreshTokenDto from '@domain/dto/auth/refreshToken.dto';
 
 @Controller('auth')
 export default class AuthController {

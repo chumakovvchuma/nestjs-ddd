@@ -1,9 +1,9 @@
 import { Test, TestingModule } from '@nestjs/testing';
-
-import AuthController from '@components/auth/auth.controller';
-import AuthService from '@components/auth/auth.service';
-import UsersService from '@components/users/users.service';
 import { JwtService } from '@nestjs/jwt';
+
+import AuthController from '@app/controllers/auth.controller';
+import AuthService from '@domain/services/auth.service';
+import UsersService from '@domain/services/user.service';
 
 describe('Auth Controller', () => {
   let controller: AuthController;
