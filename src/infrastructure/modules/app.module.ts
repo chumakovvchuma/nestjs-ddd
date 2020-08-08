@@ -11,7 +11,7 @@ import UsersModule from '@infrastructure/modules/users.module';
     UsersModule,
     TypeOrmModule.forRoot({
       type: 'mongodb',
-      url: 'mongodb+srv://root:1234@cluster0-ilpdw.mongodb.net/nestjs-test-api',
+      url: '<your_url>',
       // automatically try to reconnect when it loses connection
       autoReconnect: true,
       // reconnect every reconnectInterval milliseconds
